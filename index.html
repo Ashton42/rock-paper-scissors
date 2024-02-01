@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        color: chartreuse;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        font-size: 200px;
+        text-align: center;
+    }
+</style>
+
+<script>
+
+    function createComputerMove() {
+        let randomNum = Math.floor(Math.random() * 3);
+        if (randomNum == 0) {
+            return 'rock'
+        } else if (randomNum == 1) {
+            return 'paper'
+        } else {
+            return 'scissors'
+        }
+    }
+
+    let computerMove = createComputerMove();
+    let playerMove = prompt('Rock, Paper, or Scissors').trim().toLowerCase();
+
+    function playRound(playerMove, computerMove) {
+        if (playerMove === computerMove) {
+            return `Tie! You both chose ${playerMove}!`
+        } else if (playerMove == 'rock') {
+            if (computerMove == 'paper') {
+                return 'You lose! Paper beats rock.'
+            } else {
+                return 'You win! Rock beats scissors.'
+            }
+        } else if (playerMove == 'paper') {
+            if (computerMove == 'scissors') {
+                return 'You lose! Scissors beats paper.'
+            } else {
+                return "You win! Paper beats rock."
+            }
+        } else if (playerMove == 'scissors') {
+            if (computerMove == "rock") {
+                return "You lose! Rock beats scissors."
+            } else {
+                return "You win! Scissors beats paper"
+            }
+        } else {
+            return "Please choose rock, paper, or scissors."
+        }
+    }
+
+    // function playGame() {
+    //     playRound(playerMove, computerMove);
+    //     playRound(playerMove, computerMove);
+    //     playRound(playerMove, computerMove);
+    //     playRound(playerMove, computerMove);
+    //     playRound(playerMove, computerMove);
+    // }
+    
+
+console.log(playGame())
+</script>
+
+
+<body>
+    <h1>Rock<br>Paper<br>Scissors</h1>
+</body>
+</html>
