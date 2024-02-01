@@ -34,9 +34,6 @@
         }
     }
 
-    let computerMove = createComputerMove();
-    let playerMove = prompt('Rock, Paper, or Scissors').trim().toLowerCase();
-
     function playRound(playerMove, computerMove) {
         if (playerMove === computerMove) {
             return `Tie! You both chose ${playerMove}!`
@@ -63,16 +60,13 @@
         }
     }
 
-    // function playGame() {
-    //     playRound(playerMove, computerMove);
-    //     playRound(playerMove, computerMove);
-    //     playRound(playerMove, computerMove);
-    //     playRound(playerMove, computerMove);
-    //     playRound(playerMove, computerMove);
-    // }
-    
+const computerMove = createComputerMove();
+const playerMove = prompt('Rock, Paper, or Scissors').trim().toLowerCase();
 
-console.log(playGame())
+console.log(playRound(playerMove, computerMove))
+
+//still need to add playGame() function and figure out how to run computer and player selections each round
+// WORKING METHOD(Not Preferred)  --->   console.log(playRound(prompt(), createComputerMove()));
 </script>
 
 
