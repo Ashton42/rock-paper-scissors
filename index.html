@@ -60,13 +60,16 @@
         }
     }
 
-const computerMove = createComputerMove();
-const playerMove = prompt('Rock, Paper, or Scissors').trim().toLowerCase();
+function playGame() {
+    console.log(playRound(prompt('Rock, Paper, or Scissors').trim().toLowerCase(), createComputerMove()));
+    console.log(playRound(prompt('Rock, Paper, or Scissors').trim().toLowerCase(), createComputerMove()));
+    console.log(playRound(prompt('Rock, Paper, or Scissors').trim().toLowerCase(), createComputerMove()));
+    console.log(playRound(prompt('Rock, Paper, or Scissors').trim().toLowerCase(), createComputerMove()));
+    console.log(playRound(prompt('Rock, Paper, or Scissors').trim().toLowerCase(), createComputerMove()));
+}
 
-console.log(playRound(playerMove, computerMove))
+playGame()
 
-//still need to add playGame() function and figure out how to run computer and player selections each round
-// WORKING METHOD(Not Preferred)  --->   console.log(playRound(prompt(), createComputerMove()));
 </script>
 
 
