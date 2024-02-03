@@ -24,7 +24,8 @@
 <script>
 
     function createComputerMove() {
-        let randomNum = Math.floor(Math.random() * 3);
+        let randomRPS = 3
+        let randomNum = Math.floor(Math.random() * randomRPS);
         if (randomNum == 0) {
             return 'rock'
         } else if (randomNum == 1) {
@@ -35,7 +36,7 @@
     }
 
     function playRound(playerMove, computerMove) {
-        if (playerMove === computerMove) {
+        if (playerMove == computerMove) {
             return `Tie! You both chose ${playerMove}.`
         } else if (playerMove == 'rock') {
             if (computerMove == 'paper') {
