@@ -1,0 +1,12 @@
+* {
+    color: chartreuse;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 200px;
+    text-align: center;
+}
