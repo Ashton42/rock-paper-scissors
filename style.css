@@ -1,12 +1,20 @@
 * {
     color: chartreuse;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
+    background-color: black;
+    display: inline-block;
     font-size: 200px;
     text-align: center;
+    border: 7px solid chartreuse;
+    border-radius: 80px;
+    padding: 70px;
 }
